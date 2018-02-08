@@ -15,8 +15,8 @@ class App extends React.Component {
         <Text style={homeHeader}>This is the Home Component</Text>
         <View style={buttonWrapper}> 
           <Button title="Sign In"  onPress={() => navigate('SignIn')}/>
-          <Button title="Sign Up"  onPress={() => alert('Pressed Button')}/>
-          <Button title="Contents"  onPress={() => alert('Pressed Button')}/>
+          <Button title="Sign Up"  onPress={() => navigate('SignUp')}/>
+          <Button title="Contents"  onPress={() => navigate('Contents')}/>
         </View>
       </View>
     );
