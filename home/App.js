@@ -3,13 +3,14 @@ import { StyleSheet, Text, View, Button } from "react-native";
 import { createStackNavigator } from "react-navigation";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
+import Content from "./Content";
 
 const App = props => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Button title="SignUp" onPress={() => props.navigation.navigate("SignUp")} />
-      <Button title="SignIn" onPress={() => props.navigation.navigate("SignIn")} />
+      <Text>Home</Text>
+      <Button title="Sign Up" onPress={() => props.navigation.navigate("SignUp")} />
+      <Button title="Sign In" onPress={() => props.navigation.navigate("SignIn")} />
     </View>
   );
 };
@@ -17,7 +18,7 @@ const App = props => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "skyblue",
     alignItems: "center",
     justifyContent: "center"
   }
@@ -26,7 +27,8 @@ const styles = StyleSheet.create({
 const Routes = createStackNavigator({
   App: { screen: App },
   SignIn: { screen: SignIn },
-  SignUp: { screen: SignUp }
+  SignUp: { screen: SignUp },
+  Content: { screen: Content }
 });
 
 export default Routes;
